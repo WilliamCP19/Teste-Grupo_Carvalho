@@ -1,5 +1,92 @@
-* {
-    background-size: 24.5%;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Protest+Strike&display=swap');
+
+body {
+    background-color: #A0522D;
+    font-family: 'Protest Strike', sans-serif;
+    background-size: 25vw;
     padding: 0;
     margin: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    box-shadow: 10px 20px 500vw #CD661D;
+}
+
+figure {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 10px 12px 10px #8B4726;
+    background-color: #D2691E;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > h2 {
+    font-weight: 800;
+    color: #8B1A1A;
+}
+
+label {
+    color: #8B0000;
+}
+
+input {
+    background-color: #EE7942;
+    margin: 4px;
+    padding: 3px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px -5px 40px #F4A460;
+}
+input::placeholder {
+    color: #8B4726;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    width: 50%;
+    outline: none;
+    font-weight: 800;
+    color: #EE9572;
+    cursor: pointer;
+    background-color: #8B2500;
+}
+
+.formulario {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgLogo {
+    width: 25vw;
 }
