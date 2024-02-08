@@ -7,20 +7,24 @@
     <link rel="Icon" href="imagens/icone.ico" type="image/x-icon">
     <title>Registration</title>
 </head>
-<body>
+<body background="imagens/fundo1.png">
     <main>
         <figure>
-            <img id="imgLogo" src="imagens/header.jpg" alt="">
+            <img id="imgLogo" src="imagens/header.jpg" alt="Logo">
         </figure>
         <div class="formulario">
-            <section>
+            <section class="cardFormulario">
                 <form>
                     <h2>Faça Login</h2>
-                    <label for="txtEmail">E-mail</label>
-                    <input type="email" name="email" placeholder="E-mail">
-                    <label for="txtSenha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                    <button>Entrar</button>
+                    <label class="labelTelaLogin" for="txtEmail">E-mail</label>
+                    <input class="inputTelaLogin" type="email" name="email" placeholder="E-mail">
+
+                    <label class="labelTelaLogin" for="txtSenha">Senha</label>
+                    <input class="inputTelaLogin" type="password" name="senha" placeholder="Senha">
+                    
+                    <button class="buttonTelaLogin">Entrar</button>
+                    <h6>Não tem conta:</h6>
+                    <a id="linkTelaLogin" href="cadUser.html">Cadastrar Usuário</a>
                 </form>
             </section>
         </div>
