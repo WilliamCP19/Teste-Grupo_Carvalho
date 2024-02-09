@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="Icon" href="imagens/icone.ico" type="image/x-icon">
+    <link rel="Icon" href="./imagens/icone.ico" type="image/x-icon">
     <title>Register</title>
 </head>
-<body background="imagens/fundo.png">
+<body background="imagens/fundoCad.png">
     <main>
         <div class="formulario">
             <section class="cardFormularioAlternativo">
-                <form>
-                    <label class="labelTelaCad" for="txtNome">Nome:</label>
-                    <input class="inputTelaCad" type="text" name="nome" placeholder="Nome">
+                <form action="index.html">
+                    <label class="labelTelaCad" for="txtNome" id="nome">Nome:</label>
+                    <input id="txtNome" class="inputTelaCad" type="text" name="nome" placeholder="Nome" required>
 
                     <label class="labelTelaCad" for="txtEmail">E-mail</label>
-                    <input class="inputTelaCad" type="email" name="email" placeholder="E-mail">
+                    <input id="txtEmail" class="inputTelaCad" type="email" name="email" placeholder="E-mail" required>
                     
                     <label class="labelTelaCad" for="txtCpf">CPF</label>
-                    <input class="inputTelaCad" type="number" name="cpf" placeholder="CPF">
+                    <input id="txtCpf" class="inputTelaCad" type="text" name="cpf" placeholder="Digite Somente Números" autocomplete="off" minlength="14" maxlength="14" required>
 
                     <label class="labelTelaCad" for="txtTelefone">Telefone</label>
-                    <input class="inputTelaCad" type="number" name="telefone" placeholder="Telefone">
+                    <input id="txtTelefone" class="inputTelaCad" type="text" name="telefone" placeholder="Digite Somente Números" minlength="15" maxlength="15" required>
 
                     <label class="labelTelaCad" for="txtSenha">Senha</label>
-                    <input class="inputTelaCad" type="password" name="senha" placeholder="Senha">
+                    <input id="txtSenha" class="inputTelaCad" type="password" name="senha" placeholder="Senha" required>
+                    <input id="checkSenha" type="checkbox" name="checkSenha">
+                    <h4>Mostra Senha</h4>
 
-                    <button class="buttonTelaCad">Cadastrar</button>
-                    <a id="linkTelaCad" href="index.html">Voltar a Home</a>
+                    <button onclick="cadastrarUsuario()" type="submit" class="buttonTelaCad">Cadastrar</button>
+                    <a class="linkTelaCad" href="index.html">Voltar a Home</a>
                 </form>
             </section>
         </div>
         <figure>
-            <img src="imagens/header - Copia.jpg" id="imgLogo" alt="Logo">
+            <img src="imagens/logoCad.jpg" class="imgLogo" alt="Logo">
         </figure>
     </main>
+
+    <script src="scripts/cadUser.js"></script>
 </body>
 </html>
