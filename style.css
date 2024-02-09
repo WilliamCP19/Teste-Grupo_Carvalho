@@ -157,3 +157,32 @@ a {
     margin-top: 10px;
     color: #8B4726;
 }
+
+@media (max-width: 820px) {
+    .formulario {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #figuraCad {
+        display: none;
+    }
+
+    #figuraLogin {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cardFormularioAlt {
+        width: 70%;
+    }
+
+    .cardFormulario {
+        width: 70%;
+    }
+
+    figure > img {
+        height: 60%;
+    }
+}
