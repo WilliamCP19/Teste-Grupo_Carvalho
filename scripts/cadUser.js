@@ -4,7 +4,7 @@ let cpf = document.getElementById("txtCpf");
 let telefone = document.getElementById("txtTelefone");
 const senha = document.getElementById("txtSenha");
 
-cpf.addEventListener('keypress', () => {
+cpf.addEventListener('keypress', (letra) => {
     let lengthCpf = cpf.value.length;
     if (lengthCpf === 3 || lengthCpf === 7) {
         cpf.value += '.';
@@ -34,11 +34,19 @@ document.getElementById("checkSenha").addEventListener('click', () => {
         }
 })
 
-const cadastrarUsuario = () => {
+function cadastrarUsuario () {
     localStorage.nome = nome.value;
     localStorage.email = email.value;
     localStorage.cpf = cpf.value;
     localStorage.telefone = telefone.value;
     localStorage.senha = senha.value;
-    location.href = './index.html';
+}
+
+const bloquearLetra = (digito) => {
+    let validarDigito = digito.value;
+
+    if(isNaN(validarDigito[validarDigito.length-1])) {
+        digito.value = validarDigito.substring(0, validarDigito.length-1);
+        return;
+    }
 }

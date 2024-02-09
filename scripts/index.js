@@ -8,9 +8,11 @@ const logar = () => {
                 "nome": email.value,
                 "senha": senha.value
             }
-            alert ("DADOS CADASTRADOS:\n"+dados.nome+"\n"+dados.senha);
+            alert ("DADOS CADASTRADOS:\nEmail: "+dados.nome+"\nSenha: "+dados.senha);
         } else {
-            alert ("A Senha está Errada");
+            if (senha.value.length > 0) {
+                alert ("A Senha está Errada");
+            }
         }
     } else {
         if (email.value.length > 0) {

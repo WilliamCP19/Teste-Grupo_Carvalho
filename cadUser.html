@@ -10,8 +10,8 @@
 <body background="imagens/fundoCad.png">
     <main>
         <div class="formulario">
-            <section class="cardFormularioAlternativo">
-                <form action="index.html">
+            <section class="cardFormularioAlt">
+                <form action="index.html" onsubmit="cadastrarUsuario()">
                     <label class="labelTelaCad" for="txtNome" id="nome">Nome:</label>
                     <input id="txtNome" class="inputTelaCad" type="text" name="nome" placeholder="Nome" required>
 
@@ -19,17 +19,17 @@
                     <input id="txtEmail" class="inputTelaCad" type="email" name="email" placeholder="E-mail" required>
                     
                     <label class="labelTelaCad" for="txtCpf">CPF</label>
-                    <input id="txtCpf" class="inputTelaCad" type="text" name="cpf" placeholder="Digite Somente Números" autocomplete="off" minlength="14" maxlength="14" required>
+                    <input id="txtCpf" class="inputTelaCad" oninput="bloquearLetra(this)" type="text" name="cpf" placeholder="Digite Somente Números" autocomplete="off" minlength="14" maxlength="14" required>
 
                     <label class="labelTelaCad" for="txtTelefone">Telefone</label>
-                    <input id="txtTelefone" class="inputTelaCad" type="text" name="telefone" placeholder="Digite Somente Números" minlength="15" maxlength="15" required>
+                    <input id="txtTelefone" class="inputTelaCad" oninput="bloquearLetra(this)" type="text" name="telefone" placeholder="Digite Somente Números" minlength="15" maxlength="15" required>
 
                     <label class="labelTelaCad" for="txtSenha">Senha</label>
                     <input id="txtSenha" class="inputTelaCad" type="password" name="senha" placeholder="Senha" required>
                     <input id="checkSenha" type="checkbox" name="checkSenha">
                     <h4>Mostra Senha</h4>
 
-                    <button onclick="cadastrarUsuario()" type="submit" class="buttonTelaCad">Cadastrar</button>
+                    <button type="submit" class="buttonTelaCad">Cadastrar</button>
                     <a class="linkTelaCad" href="index.html">Voltar a Home</a>
                 </form>
             </section>
